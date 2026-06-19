@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Gestión de Tareas - NoSQL</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <h1>Gestión de Tareas (MongoDB + Node.js)</h1>
+
+  <section id="form-section">
+    <h2>Crear / Editar Tarea</h2>
+
+    <form id="task-form">
+     
+      <input type="hidden" id="task-id" />
+
+      <label>Título:</label>
+      <input type="text" id="title" required />
+
+      <label>Descripción:</label>
+      <textarea id="description"></textarea>
+
+      <label>Estado:</label>
+      <select id="status">
+        <option value="pendiente">Pendiente</option>
+        <option value="en_progreso">En progreso</option>
+        <option value="completada">Completada</option>
+      </select>
+
+    
+      <button type="button" id="save-btn" class="guardar">Guardar</button>
+
+      <button type="button" id="reset-btn">Limpiar</button>
+    </form>
+  </section>
+
+  <section id="list-section">
+    <h2>Listado de Tareas</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Título</th>
+          <th>Descripción</th>
+          <th>Estado</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="tasks-table-body">
+      </tbody>
+    </table>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
